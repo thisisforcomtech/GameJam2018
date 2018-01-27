@@ -10,6 +10,10 @@ TagManager:
   - Enemy
   - Home
   - Rocks
+  - Radar
+  - Sonar
+  - Large Asteroid
+  - Small Asteroid
   layers:
   - Default
   - TransparentFX
@@ -19,7 +23,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Collider
   - 
   - 
   - 

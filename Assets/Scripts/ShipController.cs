@@ -13,6 +13,9 @@ public class ShipController : MonoBehaviour {
     private Transform target; //Assign to the object you want to rotate
     private Vector3 object_pos;
     private float angle;
+    public GameObject sonar;
+    public GameObject Radar;
+    public GameObject gamecontroller;
 
     //ship stats
     int lives;
@@ -30,6 +33,7 @@ public class ShipController : MonoBehaviour {
         exit = GameObject.Find("Exit");
         lost.gameObject.SetActive(false);
         exit.gameObject.SetActive(false);
+
     }
 	
 	// Update is called once per frame
@@ -49,8 +53,7 @@ public class ShipController : MonoBehaviour {
         // Has a bullet been fired
         if (Input.GetMouseButtonUp(0) || Input.GetKey("space"))
         {
-            Debug.Log("ping");
-            SendSignal();
+            ShootSonar();
         }
         
 
@@ -65,11 +68,14 @@ public class ShipController : MonoBehaviour {
         if (other.gameObject.tag == "LivesPickup")
         {
             lives++;
+            gamecontroller.GetComponent<GameController>().spawnEnemies(5,2);
         }
-        if (other.gameObject.tag == "EnemyBullet")
+        else if (other.gameObject.tag == "EnemyBullet")
         {
             lives--;
         }
+
+
     }
 
     void OnCollisionEnter(Collision other)
@@ -94,6 +100,30 @@ public class ShipController : MonoBehaviour {
                 lives = 1;
             }
         }
+    }
+     void ShootSonar()
+    {
+
+        // Spawn a bullet
+        //Instantiate(bullet,
+        //   new Vector3(transform.position.x, transform.position.y, 0),
+        //   transform.rotation);
+        //Debug.Log(transform.rotation);
+        GameObject Rad =
+            GameObject.FindWithTag("Radar");
+        if (Rad == null)
+        {
+            Vector3 center = transform.position;
+            for (int i = 0; i < 300; i++)
+            {
+                Vector3 pos = RandomCircle(center, 1.5f);
+                Quaternion rot = Quaternion.FromToRotation(Vector3.forward, center - pos);
+                Instantiate(sonar, pos, rot);
+
+            }
+            Instantiate(Radar, this.transform.position, this.transform.rotation);
+        }
+        // Play a shoot sound
     }
 
     void checkDead()
@@ -163,5 +193,14 @@ public class ShipController : MonoBehaviour {
         angle = Mathf.Atan2(mouse_pos.y, mouse_pos.x) * Mathf.Rad2Deg;
         Quaternion finalRot = Quaternion.Euler(0, 0, (angle - 90));
         transform.rotation = Quaternion.RotateTowards(transform.rotation, finalRot, Time.deltaTime * rotationSpeed);
+    }
+    Vector3 RandomCircle(Vector3 center, float radius)
+    {
+        float ang = Random.value * 360;
+        Vector3 pos;
+        pos.x = center.x + radius * Mathf.Sin(ang * Mathf.Deg2Rad);
+        pos.y = center.y + radius * Mathf.Cos(ang * Mathf.Deg2Rad);
+        pos.z = center.z;
+        return pos;
     }
 }
