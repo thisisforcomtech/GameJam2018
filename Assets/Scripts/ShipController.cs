@@ -51,7 +51,7 @@ public class ShipController : MonoBehaviour {
         }
         
         // Has a bullet been fired
-        if (Input.GetMouseButtonUp(0) || Input.GetKey("space"))
+        if (Input.GetKey("space"))
         {
             ShootSonar();
         }
