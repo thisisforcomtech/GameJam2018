@@ -7,9 +7,11 @@ public class ShipController : MonoBehaviour {
     //used for movements
     float rotationSpeed = 100.0f;
     float thrustForce = 2f;
+	private float horizontal = 0.0f;
+	private float vertical = 0.0f;
 
-    //used for rotation towards pointer
-    private Vector3 mouse_pos;
+	//used for rotation towards pointer
+	private Vector3 mouse_pos;
     private Transform target; //Assign to the object you want to rotate
     private Vector3 object_pos;
     private float angle;
@@ -29,7 +31,7 @@ public class ShipController : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        CutScene();
+        //CutScene();
         target = this.GetComponent<Transform>();
         lives = 1;
         warning = GameObject.Find("Warning");
@@ -45,10 +47,14 @@ public class ShipController : MonoBehaviour {
 
         //}
 
+		cutSceneMove = false;
+		GameObject.FindWithTag("GameController").GetComponent<GameController>().BeginGame();
+		
+
     }
     void CutScene()
     {
-        StartCoroutine(Example());
+        //StartCoroutine(Example());
     }
     IEnumerator Example()
     {
@@ -84,7 +90,11 @@ public class ShipController : MonoBehaviour {
     {
         if (!cutSceneMove)
         {
-            if (Input.GetMouseButton(0) || Input.GetAxis("Vertical") != 0)
+
+			horizontal = Input.GetAxis("Horizontal");
+			vertical = Input.GetAxis("Vertical");
+
+			if (Input.GetMouseButton(0) || Input.GetAxis("Vertical") != 0)
             {
                 // Thrust the ship if necessary
                 GetComponent<Rigidbody>().

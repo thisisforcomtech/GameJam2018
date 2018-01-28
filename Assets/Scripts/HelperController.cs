@@ -16,8 +16,8 @@ public class HelperController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        syncRotation();
-        syncPosition();
+		syncRotation();
+		syncPosition();
 	}
 
     void syncRotation()

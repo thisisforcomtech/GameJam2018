@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class LivesController : MonoBehaviour {
 
+	[SerializeField]
+	private Renderer mesh; 
+
 	// Use this for initialization
 	void Start () {
-        GetComponent<Renderer>().enabled = false;
+        mesh.enabled = false;
     }
 	
 	// Update is called once per frame
@@ -22,7 +25,7 @@ public class LivesController : MonoBehaviour {
         }
         if (other.gameObject.tag == "Sonar")
         {
-            GetComponent<Renderer>().enabled = true;
+           mesh.enabled = true;
         }
     }
 }
