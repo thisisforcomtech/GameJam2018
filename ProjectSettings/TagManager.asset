@@ -16,6 +16,7 @@ TagManager:
   - Small Asteroid
   - Scene
   - Blip
+  - HomeFrame
   layers:
   - Default
   - TransparentFX
