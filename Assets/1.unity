@@ -1582,9 +1582,9 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114250079902310564, guid: fc84b9e66a5f0e74297b753710ede400,
         type: 2}
-      propertyPath: gamecontroller
+      propertyPath: tallies.Array.data[0]
       value: 
-      objectReference: {fileID: 1790952294}
+      objectReference: {fileID: 472016333}
     - target: {fileID: 114250079902310564, guid: fc84b9e66a5f0e74297b753710ede400,
         type: 2}
       propertyPath: tallies.Array.data[1]
@@ -1597,9 +1597,9 @@ Prefab:
       objectReference: {fileID: 713437678}
     - target: {fileID: 114250079902310564, guid: fc84b9e66a5f0e74297b753710ede400,
         type: 2}
-      propertyPath: tallies.Array.data[0]
+      propertyPath: gamecontroller
       value: 
-      objectReference: {fileID: 472016333}
+      objectReference: {fileID: 1790952294}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fc84b9e66a5f0e74297b753710ede400, type: 2}
   m_IsPrefabParent: 0
