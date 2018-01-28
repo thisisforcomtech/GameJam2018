@@ -28,6 +28,6 @@ public class HelperController : MonoBehaviour {
     void syncPosition()
     {
         Vector3 playerPos = shipControllerObject.transform.position;
-        transform.position = new Vector3(playerPos.x + myPosX, playerPos.y + myPosY, playerPos.z);
+        transform.position = new Vector3(playerPos.x + myPosX, playerPos.y + myPosY, transform.position.z);
     }
 }

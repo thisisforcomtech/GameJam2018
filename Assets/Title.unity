@@ -389,47 +389,9 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4309998987837502, guid: fc84b9e66a5f0e74297b753710ede400, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 4309998987837502, guid: fc84b9e66a5f0e74297b753710ede400, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 114250079902310564, guid: fc84b9e66a5f0e74297b753710ede400,
-        type: 2}
-      propertyPath: m_Enabled
+    - target: {fileID: 1644318340050694, guid: fc84b9e66a5f0e74297b753710ede400, type: 2}
+      propertyPath: m_IsActive
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4309998987837502, guid: fc84b9e66a5f0e74297b753710ede400, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 96323761829165584, guid: fc84b9e66a5f0e74297b753710ede400,
-        type: 2}
-      propertyPath: m_MotionVectors
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 96323761829165584, guid: fc84b9e66a5f0e74297b753710ede400,
-        type: 2}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 06a63daac5011434eb5dc1f23a96677c, type: 2}
-    - target: {fileID: 96323761829165584, guid: fc84b9e66a5f0e74297b753710ede400,
-        type: 2}
-      propertyPath: m_Parameters.widthMultiplier
-      value: 4.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 96323761829165584, guid: fc84b9e66a5f0e74297b753710ede400,
-        type: 2}
-      propertyPath: m_Time
-      value: 0.42
-      objectReference: {fileID: 0}
-    - target: {fileID: 96323761829165584, guid: fc84b9e66a5f0e74297b753710ede400,
-        type: 2}
-      propertyPath: m_Parameters.colorGradient.key0.r
-      value: 0.028
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fc84b9e66a5f0e74297b753710ede400, type: 2}
@@ -2631,28 +2593,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1808220782 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1063790659717842, guid: fc84b9e66a5f0e74297b753710ede400,
-    type: 2}
-  m_PrefabInternal: {fileID: 210445893}
---- !u!95 &1808220783
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1808220782}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 33b6ab514df061240ad9b1ed7b2693c0, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &1827561165
 GameObject:
   m_ObjectHideFlags: 0
