@@ -325,17 +325,17 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 0}
-    m_FontSize: 14
+    m_Font: {fileID: 12800000, guid: bc4e852ff3c12114db7be5292915b6c1, type: 3}
+    m_FontSize: 64
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
-    m_Alignment: 0
+    m_MinSize: 3
+    m_MaxSize: 64
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: Mission Failed
 --- !u!222 &79174484
@@ -1363,7 +1363,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4510930093768070, guid: 31358118d9ff290429e87b41dbb5a54d, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -63.7
+      value: -23.7
       objectReference: {fileID: 0}
     - target: {fileID: 4510930093768070, guid: 31358118d9ff290429e87b41dbb5a54d, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1554,7 +1554,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4309998987837502, guid: fc84b9e66a5f0e74297b753710ede400, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -60
+      value: -33
       objectReference: {fileID: 0}
     - target: {fileID: 4309998987837502, guid: fc84b9e66a5f0e74297b753710ede400, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1841,6 +1841,7 @@ GameObject:
   - component: {fileID: 776257080}
   - component: {fileID: 776257079}
   - component: {fileID: 776257078}
+  - component: {fileID: 776257081}
   m_Layer: 0
   m_Name: Exit
   m_TagString: Untagged
@@ -1864,7 +1865,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -24.1}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &776257078
@@ -1905,7 +1906,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 776257079}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 776257081}
+        m_MethodName: NextScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &776257079
@@ -1941,6 +1953,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 776257076}
+--- !u!114 &776257081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 776257076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fec093dd4508ff249b058b8d55529285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &798056664
 GameObject:
   m_ObjectHideFlags: 0
@@ -1999,19 +2022,23 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 0}
-    m_FontSize: 14
+    m_Font: {fileID: 12800000, guid: bc4e852ff3c12114db7be5292915b6c1, type: 3}
+    m_FontSize: 64
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
-    m_Alignment: 0
+    m_MinSize: 1
+    m_MaxSize: 64
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: '!WARNING!'
+  m_Text: '!WARNING!
+
+    LOSSING SIGNAL
+
+    TURN BACK'
 --- !u!222 &798056667
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2178,7 +2205,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4510930093768070, guid: 31358118d9ff290429e87b41dbb5a54d, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -62.5
+      value: -22.5
       objectReference: {fileID: 0}
     - target: {fileID: 4510930093768070, guid: 31358118d9ff290429e87b41dbb5a54d, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2219,7 +2246,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1409235509}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -60, z: -10}
+  m_LocalPosition: {x: 0, y: -27, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1627996520}
@@ -2240,7 +2267,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4510930093768070, guid: 31358118d9ff290429e87b41dbb5a54d, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -65.1
+      value: -25.1
       objectReference: {fileID: 0}
     - target: {fileID: 4510930093768070, guid: 31358118d9ff290429e87b41dbb5a54d, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2362,7 +2389,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4510930093768070, guid: 31358118d9ff290429e87b41dbb5a54d, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -59.5
+      value: -29.5
       objectReference: {fileID: 0}
     - target: {fileID: 4510930093768070, guid: 31358118d9ff290429e87b41dbb5a54d, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2558,7 +2585,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4554505163937234, guid: 93c266891b74fb340ba50529fc79299f, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -55.66
+      value: -25.66
       objectReference: {fileID: 0}
     - target: {fileID: 4554505163937234, guid: 93c266891b74fb340ba50529fc79299f, type: 2}
       propertyPath: m_LocalPosition.z
@@ -3743,7 +3770,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4510930093768070, guid: 31358118d9ff290429e87b41dbb5a54d, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -58.7
+      value: -28.7
       objectReference: {fileID: 0}
     - target: {fileID: 4510930093768070, guid: 31358118d9ff290429e87b41dbb5a54d, type: 2}
       propertyPath: m_LocalPosition.z

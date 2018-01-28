@@ -2,23 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShipController : MonoBehaviour {
+public class ShipController : MonoBehaviour
+{
 
-	//used for movements
-	float rotationSpeed = 100.0f;
-	float thrustForce = 2f;
-	private float horizontal = 0.0f;
-	private float vertical = 0.0f;
+    //used for movements
+    float rotationSpeed = 100.0f;
+    float thrustForce = 2f;
+    private float horizontal = 0.0f;
+    private float vertical = 0.0f;
 
-	//#ScoreUI
-	[SerializeField]
-	private GameObject[] tallies = new GameObject[3];
-
-	
+    //#ScoreUI
+    [SerializeField]
+    private GameObject[] tallies = new GameObject[3];
 
 
-//used for rotation towards pointer
-private Vector3 mouse_pos;
+
+
+    //used for rotation towards pointer
+    private Vector3 mouse_pos;
     private Transform target; //Assign to the object you want to rotate
     private Vector3 object_pos;
     private float angle;
@@ -32,7 +33,7 @@ private Vector3 mouse_pos;
     //ship stats
     int lives;
 
-	
+
 
     GameObject warning;
     GameObject lost;
@@ -41,17 +42,19 @@ private Vector3 mouse_pos;
 
 
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
 
-		for (int i = 0; i <= tallies.Length; i++) {
-			//switch (tallies[i].name) {
+        for (int i = 0; i <= tallies.Length; i++)
+        {
+            //switch (tallies[i].name) {
 
-			//}
+            //}
 
-		}
+        }
 
-		//CutScene();
-		target = this.GetComponent<Transform>();
+        //CutScene();
+        target = this.GetComponent<Transform>();
         lives = 1;
         warning = GameObject.Find("Warning");
         lost = GameObject.Find("Lost");
@@ -61,15 +64,15 @@ private Vector3 mouse_pos;
 
         //for (int i = 0; i < 150; i++)
         //{
- 
-          //  Instantiate(sonar, new Vector3 (0,0,0), new Quaternion(0,0,0,0));
+
+        //  Instantiate(sonar, new Vector3 (0,0,0), new Quaternion(0,0,0,0));
 
         //}
 
-		cutSceneMove = false;
-		gamecontroller = GameObject.FindWithTag("GameController");
-		gamecontroller.GetComponent<GameController>().BeginGame();
-		
+        cutSceneMove = false;
+        gamecontroller = GameObject.FindWithTag("GameController");
+        gamecontroller.GetComponent<GameController>().BeginGame();
+
 
     }
     void CutScene()
@@ -102,19 +105,20 @@ private Vector3 mouse_pos;
         GameObject.FindWithTag("GameController").GetComponent<GameController>().BeginGame();
     }
     // Update is called once per frame
-    void Update () {
-		
-	}
-    
+    void Update()
+    {
+
+    }
+
     void FixedUpdate()
     {
         if (!cutSceneMove)
         {
 
-			horizontal = Input.GetAxis("Horizontal");
-			vertical = Input.GetAxis("Vertical");
+            horizontal = Input.GetAxis("Horizontal");
+            vertical = Input.GetAxis("Vertical");
 
-			if (Input.GetMouseButton(0) || Input.GetAxis("Vertical") != 0)
+            if (Input.GetMouseButton(0) || Input.GetAxis("Vertical") != 0)
             {
                 // Thrust the ship if necessary
                 GetComponent<Rigidbody>().
@@ -133,6 +137,7 @@ private Vector3 mouse_pos;
             checkDead();
         }
         LookAtMouse();
+        checkBounds();
     }
 
     void OnTriggerEnter(Collider other)
@@ -140,16 +145,17 @@ private Vector3 mouse_pos;
         if (other.gameObject.tag == "LivesPickup")
         {
             lives++;
-			Destroy(other.gameObject);
+            Destroy(other.gameObject);
             //gamecontroller.GetComponent<GameController>().spawnEnemies(5,2);
         }
         else if (other.gameObject.tag == "EnemyBullet")
         {
             lives--;
         }
-		else if (other.gameObject.tag == "HomeFrame") {
+        else if (other.gameObject.tag == "HomeFrame")
+        {
 
-		}
+        }
 
 
     }
@@ -177,7 +183,7 @@ private Vector3 mouse_pos;
             }
         }
     }
-     void ShootSonar()
+    void ShootSonar()
     {
 
         // Spawn a bullet
@@ -187,7 +193,7 @@ private Vector3 mouse_pos;
         //Debug.Log(transform.rotation);
         GameObject Rad =
             GameObject.FindWithTag("Radar");
-        GameObject[]  sonars = GameObject.FindGameObjectsWithTag("Sonar");
+        GameObject[] sonars = GameObject.FindGameObjectsWithTag("Sonar");
 
         if (Rad == null)
         {
@@ -231,19 +237,17 @@ private Vector3 mouse_pos;
         }
     }
 
-    void SpawnHelpers ()
+    void SpawnHelpers()
     {
         switch (lives)
         {
             case 1:
-                warning.gameObject.SetActive(true);
                 transform.Find("Helper (0)").gameObject.SetActive(false);
                 transform.Find("Helper (1)").gameObject.SetActive(false);
                 transform.Find("Helper (2)").gameObject.SetActive(false);
                 transform.Find("Helper (3)").gameObject.SetActive(false);
                 break;
             case 2:
-                warning.gameObject.SetActive(false);
                 transform.Find("Helper (0)").gameObject.SetActive(true);
                 transform.Find("Helper (1)").gameObject.SetActive(false);
                 transform.Find("Helper (2)").gameObject.SetActive(false);
@@ -273,7 +277,7 @@ private Vector3 mouse_pos;
 
     void SendSignal()
     {
-        
+
     }
 
     //rotation method
@@ -296,5 +300,33 @@ private Vector3 mouse_pos;
         pos.y = center.y + radius * Mathf.Cos(ang * Mathf.Deg2Rad);
         pos.z = center.z;
         return pos;
+    }
+
+    void checkBounds()
+    {
+        
+        if ((transform.position.x > 35  ||
+            transform.position.x < -35 ||
+            transform.position.y > 35 ||
+            transform.position.y < -35) &&
+            (transform.position.x < 40 ||
+            transform.position.x > -40 ||
+            transform.position.y < 40 ||
+            transform.position.y > -40))
+        {
+            warning.gameObject.SetActive(true);
+        }
+        else if (transform.position.x < 35 ||
+            transform.position.x > -35 ||
+            transform.position.y < 35 ||
+            transform.position.y > -35)
+        {
+            warning.gameObject.SetActive(false);
+        }
+        if (transform.position.x > 40 || transform.position.x < -40 || transform.position.y > 40 || transform.position.y < -40)
+        {
+            warning.gameObject.SetActive(false);
+            lives--;
+        }
     }
 }
