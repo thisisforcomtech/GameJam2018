@@ -310,6 +310,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\LivesPickup.cs" />
+    <Compile Include="Assets\MinimapFollowHandler.cs" />
     <Compile Include="Assets\PlayerAnimationHandler.cs" />
     <Compile Include="Assets\Scripts\ArrowScript.cs" />
     <Compile Include="Assets\Scripts\AsteroidController.cs" />
