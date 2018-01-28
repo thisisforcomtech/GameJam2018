@@ -58,6 +58,24 @@ public class EnemyController : MonoBehaviour {
         else
         {
             IsAttacking = false;
+            if (wanderTime <= 0)
+            {
+                if (turnTime > 0) 
+		{
+                    spinBehind();
+                    turnTime--;
+		}
+                else if (turnTime <= 0)
+                {
+                    wanderTime = 300;
+                    turnTime = 120;
+                }
+            }
+            else if (wanderTime > 0)
+            {
+                GetComponent<Rigidbody>().AddForce(transform.up * -0.75f);
+                wanderTime--;
+            }
         }
     }
 
@@ -97,4 +115,7 @@ public class EnemyController : MonoBehaviour {
             }
         }
     }
+	void spinBehind()
+	{
+	}
 }
