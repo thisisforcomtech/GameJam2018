@@ -14,6 +14,8 @@ public class EnemyController : MonoBehaviour {
     float fireRate = 3f;
     float nextFire = 3f;
     float aggro;
+    float wanderTime = 300;
+    float turnTime = 120;
 
     public GameObject enemyBullet;
 

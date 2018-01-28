@@ -8,6 +8,8 @@ public class AsteroidController : MonoBehaviour
     public GameObject smallAsteroid;
 
     private GameController gameController;
+    public GameObject grandChild1;
+    public GameObject grandChild2;
 
     // Use this for initialization
     void Start()
@@ -20,19 +22,32 @@ public class AsteroidController : MonoBehaviour
         gameController =
             gameControllerObject.GetComponent<GameController>();
 
+        grandChild1 = this.gameObject.transform.GetChild(0).GetChild(0).gameObject;
+        grandChild2 = this.gameObject.transform.GetChild(0).GetChild(1).GetChild(0).gameObject;
+        grandChild1.GetComponent<Renderer>().enabled = false;
+        grandChild2.GetComponent<Renderer>().enabled = false;
+
         // Push the asteroid in the direction it is facing
-/*        GetComponent<Rigidbody>()
-            .AddForce(transform.up * Random.Range(-50.0f, 150.0f));*/
+        /*        GetComponent<Rigidbody>()
+                    .AddForce(transform.up * Random.Range(-50.0f, 150.0f));*/
 
         // Give a random angular velocity/rotation
-/*        GetComponent<Rigidbody>()
-            .angularVelocity = Random.Range(-0.0f, 90.0f);*/
+        /*        GetComponent<Rigidbody>()
+                    .angularVelocity = Random.Range(-0.0f, 90.0f);*/
 
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag.Equals("Sonar"))
+        {
+            grandChild1.GetComponent<Renderer>().enabled = true;
+            grandChild2.GetComponent<Renderer>().enabled = true;
+        }
+    }
     void OnCollisionEnter(Collision c)
     {
-
+      
         if (c.gameObject.tag.Equals("Bullet"))
         {
 

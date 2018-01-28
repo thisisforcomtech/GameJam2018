@@ -56,7 +56,6 @@ public class GameController : MonoBehaviour
     void SpawnAsteroids()
     {
 
-        DestroyExistingAsteroids();
 
         // Decide how many asteroids to spawn
         // If any asteroids left over from previous game, subtract them
@@ -67,8 +66,28 @@ public class GameController : MonoBehaviour
 
             // Spawn an asteroid
             Instantiate(asteroid,
-                new Vector3(Random.Range(camera.position.x - 50.0f, camera.position.x + 50.0f),
-                    Random.Range( camera.position.y -50.0f, camera.position.y + 50.0f), 0),
+                new Vector3(Random.Range( -50.0f,  50.0f),
+                    Random.Range( -50.0f, 50.0f), 0),
+                Quaternion.Euler(0, 0, Random.Range(-0.0f, 359.0f)));
+
+        }
+        for (int i = 0; i < 9; i++)
+        {
+
+            // Spawn an asteroid
+            Instantiate(pickups,
+                new Vector3(Random.Range(-50.0f, 50.0f),
+                    Random.Range(-30.0f, 50.0f), 0),
+                Quaternion.Euler(0, 0, Random.Range(-0.0f, 359.0f)));
+
+        }
+        for (int i = 0; i < 5; i++)
+        {
+
+            // Spawn an asteroid
+            Instantiate(enemies,
+                new Vector3(Random.Range(-50.0f, 50.0f),
+                    Random.Range(-10.0f, 50.0f), 0),
                 Quaternion.Euler(0, 0, Random.Range(-0.0f, 359.0f)));
 
         }
@@ -76,31 +95,30 @@ public class GameController : MonoBehaviour
         //for (int i = 0; i < 9; i++)
         //{
 
-            // Spawn an asteroid
-            /*GameObject[] Lives = GameObject.FindGameObjectsWithTag("LivesPickup");
-            GameObject u = Instantiate(pickups,
-                new Vector3(Random.Range(camera.position.x - 50.0f, camera.position.x + 50.0f),
-                        Random.Range( camera.position.y -50.0f, camera.position.y + 50.0f), 0),
-                Quaternion.Euler(0, 0, Random.Range(-0.0f, 359.0f)));
-            if (Lives != null)
-            {
-                foreach (GameObject Live in Lives)
-                {
-                    if (Physics.CheckSphere(Live.transform.position, 12f))
-                    {
-                        Destroy(u);
-                        i--;
-                    }
-                }
-            }*/
-            /*Instantiate(pickups,
-                new Vector3(Random.Range(camera.position.x - 50.0f, camera.position.x + 50.0f),
+        // Spawn an asteroid
+        /*GameObject[] Lives = GameObject.FindGameObjectsWithTag("LivesPickup");
+        GameObject u = Instantiate(pickups,
+            new Vector3(Random.Range(camera.position.x - 50.0f, camera.position.x + 50.0f),
                     Random.Range( camera.position.y -50.0f, camera.position.y + 50.0f), 0),
-                Quaternion.Euler(0, 0, Random.Range(-0.0f, 359.0f)));*/
+            Quaternion.Euler(0, 0, Random.Range(-0.0f, 359.0f)));
+        if (Lives != null)
+        {
+            foreach (GameObject Live in Lives)
+            {
+                if (Physics.CheckSphere(Live.transform.position, 12f))
+                {
+                    Destroy(u);
+                    i--;
+                }
+            }
+        }*/
+        /*Instantiate(pickups,
+            new Vector3(Random.Range(camera.position.x - 50.0f, camera.position.x + 50.0f),
+                Random.Range( camera.position.y -50.0f, camera.position.y + 50.0f), 0),
+            Quaternion.Euler(0, 0, Random.Range(-0.0f, 359.0f)));*/
 
         //}
-        spawnEnemies(9,1);
-        spawnEnemies(5,2);
+
         
 
         //waveText.text = "WAVE: " + wave;

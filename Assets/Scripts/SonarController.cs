@@ -8,7 +8,12 @@ public class SonarController : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        // Set the bullet to destroy itself after 1 seconds
+        rend = GetComponent<Renderer>();
+        rend.material.shader = Shader.Find("Specular");
+        rend.material.SetColor("_SpecColor", Color.red);
+    }
+    public void run()
+    {
         rot = transform.rotation;
         // Push the bullet in the direction it is facing
         StartCoroutine(Example());
@@ -16,12 +21,12 @@ public class SonarController : MonoBehaviour
     IEnumerator Example()
     {
 
-        GetComponent<Rigidbody>().velocity = -transform.forward * 2f;
+        GetComponent<Rigidbody>().velocity = -transform.forward * 10f;
         print(Time.time);
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(1);
         print(Time.time);
         transform.rotation = rot;
-        GetComponent<Rigidbody>().velocity = transform.forward * 2f;
+        GetComponent<Rigidbody>().velocity = transform.forward * 10f;
     }
     void OnTriggerEnter(Collider c)
     {
@@ -30,13 +35,17 @@ public class SonarController : MonoBehaviour
         if (c.gameObject.tag == "Radar" )
         {
 
-            Destroy(gameObject);
+            this.transform.position = new Vector3(0, 0, 0);
+            GetComponent<Rigidbody>().velocity = new Vector3(0,0,0);
+            rend = GetComponent<Renderer>();
+            rend.material.shader = Shader.Find("Specular");
+            rend.material.SetColor("_SpecColor", Color.red);
         }
         else if (c.gameObject.tag == "Large Asteroid")
         {
         	rend = GetComponent<Renderer>();
             rend.material.shader = Shader.Find("Specular");
-            rend.material.SetColor("_SpecColor",Color.red);
+            rend.material.SetColor("_SpecColor",Color.blue);
         }
     }
 }

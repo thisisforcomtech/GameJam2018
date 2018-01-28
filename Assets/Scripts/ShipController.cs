@@ -34,6 +34,13 @@ public class ShipController : MonoBehaviour {
         lost.gameObject.SetActive(false);
         exit.gameObject.SetActive(false);
 
+        for (int i = 0; i < 150; i++)
+        {
+ 
+            Instantiate(sonar, new Vector3 (0,0,0), new Quaternion(0,0,0,0));
+
+        }
+
     }
 	
 	// Update is called once per frame
@@ -111,14 +118,18 @@ public class ShipController : MonoBehaviour {
         //Debug.Log(transform.rotation);
         GameObject Rad =
             GameObject.FindWithTag("Radar");
+        GameObject[]  sonars = GameObject.FindGameObjectsWithTag("Sonar");
+
         if (Rad == null)
         {
             Vector3 center = transform.position;
-            for (int i = 0; i < 300; i++)
+            foreach (GameObject sonar in sonars)
             {
                 Vector3 pos = RandomCircle(center, 1.5f);
                 Quaternion rot = Quaternion.FromToRotation(Vector3.forward, center - pos);
-                Instantiate(sonar, pos, rot);
+                sonar.transform.position = pos;
+                sonar.transform.rotation = rot;
+                sonar.GetComponent<SonarController>().run();
 
             }
             Instantiate(Radar, this.transform.position, this.transform.rotation);
