@@ -39,7 +39,7 @@ public class AsteroidController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag.Equals("Sonar"))
+        if (other.gameObject.tag.Equals("Sonar") || other.gameObject.tag.Equals("Blip"))
         {
             grandChild1.GetComponent<Renderer>().enabled = true;
             grandChild2.GetComponent<Renderer>().enabled = true;

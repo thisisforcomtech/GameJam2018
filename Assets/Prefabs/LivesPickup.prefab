@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4263814455887624}
   - component: {fileID: 135056791191937994}
   - component: {fileID: 54124931227561992}
+  - component: {fileID: 114959924246074894}
   m_Layer: 8
   m_Name: Collider
   m_TagString: Untagged
@@ -68,7 +69,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1185941758188210}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.9095798, y: -8.404287, z: 0}
+  m_LocalPosition: {x: -8.51, y: -55.66, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4263814455887624}
@@ -105,6 +106,7 @@ MeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
 --- !u!33 &33281697760360988
 MeshFilter:
@@ -154,6 +156,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83c64d52078ad2a4dbcce975cd58cfc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114959924246074894
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1135239439607524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ba2fa08ab707164b9d047a618c3d45a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blip: {fileID: 1652718759634550, guid: fc5b46b8ab1fafa4e8d623f618146045, type: 2}
+  bliping: 0
 --- !u!135 &135056791191937994
 SphereCollider:
   m_ObjectHideFlags: 1

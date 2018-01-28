@@ -78,10 +78,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\LivesPickup.cs" />
     <Compile Include="Assets\PlayerAnimationHandler.cs" />
     <Compile Include="Assets\Scripts\ArrowScript.cs" />
     <Compile Include="Assets\Scripts\AsteroidController.cs" />
     <Compile Include="Assets\Scripts\BackToMenu.cs" />
+    <Compile Include="Assets\Scripts\BlipScript.cs" />
     <Compile Include="Assets\Scripts\Camera2DFollow.cs" />
     <Compile Include="Assets\Scripts\Dialogue.cs" />
     <Compile Include="Assets\Scripts\EnemyBulletController.cs" />
@@ -94,6 +96,7 @@
     <Compile Include="Assets\Scripts\RocksController.cs" />
     <Compile Include="Assets\Scripts\ShipController.cs" />
     <Compile Include="Assets\Scripts\SonarController.cs" />
+    <Compile Include="Assets\Scripts\SonarScript2.cs" />
     <Compile Include="Assets\Scripts\StartButtonController.cs" />
   </ItemGroup>
   <ItemGroup>

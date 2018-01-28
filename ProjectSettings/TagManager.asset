@@ -15,6 +15,7 @@ TagManager:
   - Large Asteroid
   - Small Asteroid
   - Scene
+  - Blip
   layers:
   - Default
   - TransparentFX
@@ -25,7 +26,7 @@ TagManager:
   - 
   - 
   - Collider
-  - 
+  - Sonar
   - 
   - 
   - 
