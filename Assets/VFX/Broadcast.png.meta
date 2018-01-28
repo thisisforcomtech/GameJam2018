@@ -1,0 +1,513 @@
+fileFormatVersion: 2
+guid: 4e6f96c2d6b398448b03c0e185fb851a
+timeCreated: 1517122948
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Broadcast
+    21300002: Broadcast01
+    21300004: Broadcast02
+    21300006: Broadcast03
+    21300008: Broadcast04
+    21300010: Broadcast05
+    21300012: Broadcast06
+    21300014: Broadcast07
+    21300016: Broadcast08
+    21300018: Broadcast09
+    21300020: Broadcast10
+    21300022: Broadcast11
+    21300024: Broadcast12
+    21300026: Broadcast13
+    21300028: Broadcast14
+    21300030: Broadcast15
+    21300032: Broadcast16
+    21300034: Broadcast17
+    21300036: Broadcast18
+    21300038: Broadcast19
+    21300040: Broadcast20
+    21300042: Broadcast21
+    21300044: Broadcast22
+    21300046: Broadcast23
+    21300048: Broadcast24
+    21300050: Broadcast25
+    21300052: Broadcast26
+    21300054: Broadcast27
+    21300056: Broadcast28
+    21300058: Broadcast29
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Broadcast01
+      rect:
+        serializedVersion: 2
+        x: 956
+        y: 1229
+        width: 52
+        height: 58
+      alignment: 9
+      pivot: {x: 3.2692308, y: 3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Broadcast02
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 317
+        width: 108
+        height: 107
+      alignment: 9
+      pivot: {x: 1.6666666, y: 1.6728972}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Broadcast03
+      rect:
+        serializedVersion: 2
+        x: 781
+        y: 1857
+        width: 224
+        height: 190
+      alignment: 9
+      pivot: {x: 0.7901786, y: 0.96842104}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Broadcast04
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 1111
+        width: 192
+        height: 176
+      alignment: 9
+      pivot: {x: 0.9583333, y: 1.0965909}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Broadcast05
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 811
+        width: 286
+        height: 298
+      alignment: 9
+      pivot: {x: 0.5874126, y: 0.5805369}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Broadcast06
+      rect:
+        serializedVersion: 2
+        x: 781
+        y: 1587
+        width: 222
+        height: 268
+      alignment: 9
+      pivot: {x: 0.7342342, y: 0.6380597}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Broadcast07
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 829
+        width: 356
+        height: 437
+      alignment: 9
+      pivot: {x: 0.48595506, y: 0.4347826}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Broadcast08
+      rect:
+        serializedVersion: 2
+        x: 685
+        y: 425
+        width: 327
+        height: 384
+      alignment: 9
+      pivot: {x: 0.5045872, y: 0.41927084}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Broadcast09
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 1289
+        width: 245
+        height: 296
+      alignment: 9
+      pivot: {x: 0.26530612, y: 0.27702704}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Broadcast10
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 328
+        width: 77
+        height: 96
+      alignment: 9
+      pivot: {x: -1.1558442, y: -1.5104166}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Broadcast11
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 426
+        width: 331
+        height: 401
+      alignment: 9
+      pivot: {x: 0.51963747, y: 0.46633416}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Broadcast12
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 405
+        width: 312
+        height: 364
+      alignment: 9
+      pivot: {x: 0.4679487, y: 0.39835164}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Broadcast13
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 771
+        width: 349
+        height: 425
+      alignment: 9
+      pivot: {x: 0.52149, y: 0.45647058}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Broadcast14
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1198
+        width: 365
+        height: 423
+      alignment: 9
+      pivot: {x: 0.51232874, y: 0.46335697}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Broadcast15
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 1663
+        width: 387
+        height: 384
+      alignment: 9
+      pivot: {x: 0.45994833, y: 0.46354166}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Broadcast16
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1623
+        width: 389
+        height: 424
+      alignment: 9
+      pivot: {x: 0.49100256, y: 0.44339624}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Broadcast17
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 1268
+        width: 368
+        height: 393
+      alignment: 9
+      pivot: {x: 0.5, y: 0.45038167}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Broadcast18
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1198
+        width: 365
+        height: 423
+      alignment: 9
+      pivot: {x: 0.51232874, y: 0.46335697}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Broadcast19
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 1663
+        width: 387
+        height: 384
+      alignment: 9
+      pivot: {x: 0.45994833, y: 0.46354166}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Broadcast20
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1623
+        width: 389
+        height: 424
+      alignment: 9
+      pivot: {x: 0.49100256, y: 0.44339624}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Broadcast21
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 1268
+        width: 368
+        height: 393
+      alignment: 9
+      pivot: {x: 0.5, y: 0.45038167}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Broadcast22
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1198
+        width: 365
+        height: 423
+      alignment: 9
+      pivot: {x: 0.51232874, y: 0.46335697}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Broadcast23
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 1663
+        width: 387
+        height: 384
+      alignment: 9
+      pivot: {x: 0.45994833, y: 0.46354166}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Broadcast24
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1623
+        width: 389
+        height: 424
+      alignment: 9
+      pivot: {x: 0.49100256, y: 0.44339624}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Broadcast25
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 1268
+        width: 368
+        height: 393
+      alignment: 9
+      pivot: {x: 0.5, y: 0.45038167}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Broadcast26
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1198
+        width: 365
+        height: 423
+      alignment: 9
+      pivot: {x: 0.51232874, y: 0.46335697}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Broadcast27
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 1663
+        width: 387
+        height: 384
+      alignment: 9
+      pivot: {x: 0.45994833, y: 0.46354166}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Broadcast28
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1623
+        width: 389
+        height: 424
+      alignment: 9
+      pivot: {x: 0.49100256, y: 0.44339624}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Broadcast29
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 1268
+        width: 368
+        height: 393
+      alignment: 9
+      pivot: {x: 0.5, y: 0.45038167}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
