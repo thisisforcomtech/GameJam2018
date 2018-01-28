@@ -9,8 +9,11 @@ public class EnemyController : MonoBehaviour {
     bool IsAttacking = false;
     Vector3 Distance;
     float DistanceFrom;
+    float minAimDis;
+    float minAtkDis;
     float fireRate = 3f;
     float nextFire = 3f;
+    float aggro;
 
     public GameObject enemyBullet;
 
@@ -18,6 +21,9 @@ public class EnemyController : MonoBehaviour {
     void Start () {
 		P = GameObject.FindWithTag("Player");
         Player = P.GetComponent<ShipController>();
+        minAimDis = 5;
+        minAtkDis = 3;
+        aggro = 0;
     }
 
     // Update is called once per frame
@@ -32,7 +38,19 @@ public class EnemyController : MonoBehaviour {
 
         // If the player is 10m away from the enemy, ATTACK!
 
-        if (DistanceFrom < 5)
+        if (aggro > 0)
+        {
+            minAimDis = 20;
+            minAtkDis = 12;
+            aggro--;
+        }
+        else if (aggro <= 0)
+        {
+            minAimDis = 5;
+            minAtkDis = 3;
+        }
+
+        if (DistanceFrom < minAimDis)
         {
             IsAttacking = true;
             Attacking();
@@ -42,8 +60,16 @@ public class EnemyController : MonoBehaviour {
             IsAttacking = false;
         }
     }
- 
-    void Attacking()
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Sonar")
+        {
+            aggro = 600;
+        }
+    }
+
+        void Attacking()
     {
         if (IsAttacking)
         {
@@ -59,7 +85,7 @@ public class EnemyController : MonoBehaviour {
             GetComponent<Rigidbody>().AddForce(transform.up * -0.75f);
 
             //Shoot
-            if (DistanceFrom < 3)
+            if (DistanceFrom < minAtkDis)
             {
                 if (Time.time > nextFire)
                 {
