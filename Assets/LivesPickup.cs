@@ -21,7 +21,7 @@ public class LivesPickup : MonoBehaviour {
         {
             GameObject G = Instantiate(blip, this.transform.position, this.transform.rotation);
             G.GetComponent<MeshRenderer>().material.color = new Color(0f, 1f, 0f, 0.2f);
-            G.transform.parent = this.transform;
+            G.transform.parent = this.transform.parent;
             bliping = true;
         }
     }

@@ -11,32 +11,39 @@ ModelImporter:
     100006: ShootingShip_pasted__right
     100008: ShootingShip_pasted__ship_roof
     100010: //RootNode
+    100012: Cube
     400000: pasted__main_ship_ShootingShip
     400002: ShootingShip_pasted__left
     400004: ShootingShip_pasted__left2
     400006: ShootingShip_pasted__right
     400008: ShootingShip_pasted__ship_roof
     400010: //RootNode
+    400012: Cube
     2100000: ShawtyMain
     2100002: ShawtyStripey
     2100004: ShawtySecondary
     2100006: ShawtySilvers
     2100008: ShawtyGlow_001
+    2100010: LightSource
+    2100012: ShawtyTertiary
     2300000: pasted__main_ship_ShootingShip
     2300002: ShootingShip_pasted__left
     2300004: ShootingShip_pasted__left2
     2300006: ShootingShip_pasted__right
     2300008: ShootingShip_pasted__ship_roof
+    2300010: Cube
     3300000: pasted__main_ship_ShootingShip
     3300002: ShootingShip_pasted__left
     3300004: ShootingShip_pasted__left2
     3300006: ShootingShip_pasted__right
     3300008: ShootingShip_pasted__ship_roof
+    3300010: Cube
     4300000: ShootingShip_pasted__ship_roof
     4300002: ShootingShip_pasted__right
     4300004: ShootingShip_pasted__left
     4300006: ShootingShip_pasted__left2
     4300008: pasted__main_ship_ShootingShip
+    4300010: Cube
     7400000: Default Take
     9500000: //RootNode
   externalObjects: {}

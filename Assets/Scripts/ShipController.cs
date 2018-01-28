@@ -4,14 +4,21 @@ using UnityEngine;
 
 public class ShipController : MonoBehaviour {
 
-    //used for movements
-    float rotationSpeed = 100.0f;
-    float thrustForce = 2f;
+	//used for movements
+	float rotationSpeed = 100.0f;
+	float thrustForce = 2f;
 	private float horizontal = 0.0f;
 	private float vertical = 0.0f;
 
-	//used for rotation towards pointer
-	private Vector3 mouse_pos;
+	//#ScoreUI
+	[SerializeField]
+	private GameObject[] tallies = new GameObject[3];
+
+	
+
+
+//used for rotation towards pointer
+private Vector3 mouse_pos;
     private Transform target; //Assign to the object you want to rotate
     private Vector3 object_pos;
     private float angle;
@@ -25,14 +32,26 @@ public class ShipController : MonoBehaviour {
     //ship stats
     int lives;
 
+	
+
     GameObject warning;
     GameObject lost;
     GameObject exit;
 
+
+
     // Use this for initialization
     void Start () {
-        //CutScene();
-        target = this.GetComponent<Transform>();
+
+		for (int i = 0; i <= tallies.Length; i++) {
+			//switch (tallies[i].name) {
+
+			//}
+
+		}
+
+		//CutScene();
+		target = this.GetComponent<Transform>();
         lives = 1;
         warning = GameObject.Find("Warning");
         lost = GameObject.Find("Lost");
@@ -48,7 +67,8 @@ public class ShipController : MonoBehaviour {
         //}
 
 		cutSceneMove = false;
-		GameObject.FindWithTag("GameController").GetComponent<GameController>().BeginGame();
+		gamecontroller = GameObject.FindWithTag("GameController");
+		gamecontroller.GetComponent<GameController>().BeginGame();
 		
 
     }
@@ -120,12 +140,16 @@ public class ShipController : MonoBehaviour {
         if (other.gameObject.tag == "LivesPickup")
         {
             lives++;
-            gamecontroller.GetComponent<GameController>().spawnEnemies(5,2);
+			Destroy(other.gameObject);
+            //gamecontroller.GetComponent<GameController>().spawnEnemies(5,2);
         }
         else if (other.gameObject.tag == "EnemyBullet")
         {
             lives--;
         }
+		else if (other.gameObject.tag == "HomeFrame") {
+
+		}
 
 
     }
