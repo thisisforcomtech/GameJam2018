@@ -8,6 +8,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Title.unity
     guid: 1a1ef0c2d8ffbdf469406fd2456d636f
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/1.unity
-    guid: 47a6fa42e3f0e5f4699c8645019e64af
+    guid: ad6e4ce2abbd6c446bc229989740753c
+  - enabled: 1
+    path: Assets/Victory.unity
+    guid: b87f6cea07ab617419ed17b6f40dfb42
+  - enabled: 1
+    path: Assets/GameOver.unity
+    guid: c76881b23435e0548bd08362d943358f

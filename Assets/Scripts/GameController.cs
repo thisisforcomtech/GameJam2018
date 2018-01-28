@@ -150,7 +150,10 @@ public class GameController : MonoBehaviour
     public void IncrementScore(int score)
     {
         this.score = this.score + score;
-
+        if (this.score > 8)
+        {
+            SceneManager.LoadScene("Victory");
+        }
         //scoreText.text = "SCORE:" + score;
 
         /*if (score > hiscore)
