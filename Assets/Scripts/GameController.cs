@@ -15,6 +15,7 @@ public class GameController : MonoBehaviour
     private int lives;
     private int wave;
     private int increaseEachWave = 4;
+    private bool SceneMove = true;
 
 
     public Transform camera;
@@ -22,9 +23,8 @@ public class GameController : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-
         hiscore = PlayerPrefs.GetInt("hiscore", 0);
-        BeginGame();
+        
     }
 
     // Update is called once per frame
@@ -36,8 +36,7 @@ public class GameController : MonoBehaviour
             Application.Quit();
 
     }
-
-    void BeginGame()
+    public void BeginGame()
     {
 
         score = 0;
@@ -126,46 +125,9 @@ public class GameController : MonoBehaviour
 
     public void spawnEnemies(int number, int type)
     {
-        GameObject R;
-        if (type == 1)
-        {
-            R = pickups;
-        }
-        else
-        {
-            R = enemies;
-        }
-        for (int i = 0; i < number; i++)
-        {
-            int t = Random.Range(1,3);
-            int f = Random.Range(1,3);
-            float RandomX = 0.0f;
-            float RandomY = 0.0f;
-            {
-                if (t == 1)
-                {
-                    RandomX = Random.Range(camera.position.x, camera.position.x + 50.0f);
-                }
-                else 
-                {
-                    RandomX = Random.Range(camera.position.x , camera.position.x - 50.0f);
-                }
-                if (f == 1)
-                {
-                    RandomY = Random.Range(camera.position.y , camera.position.y + 50.0f);
-                }
-                else 
-                {
-                    RandomY = Random.Range(camera.position.y , camera.position.y - 50.0f);
-                }
-
-            }
-            Instantiate(R,
-                new Vector3(RandomX,
-                    RandomY, 0),
-                Quaternion.Euler(0, 0, Random.Range(-0.0f, 359.0f)));
+       
     
-        }
+        
     }
 
     

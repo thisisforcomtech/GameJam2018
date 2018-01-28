@@ -14,6 +14,7 @@ TagManager:
   - Sonar
   - Large Asteroid
   - Small Asteroid
+  - Scene
   layers:
   - Default
   - TransparentFX

@@ -5,10 +5,9 @@ using UnityEngine;
 public class LivesController : MonoBehaviour {
 
 	// Use this for initialization
-	GameObject ChildGameObject1;
 	void Start () {
-		ChildGameObject1 = this.transform.GetChild (0).gameObject;
-	}
+        GetComponent<Renderer>().enabled = false;
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -19,7 +18,11 @@ public class LivesController : MonoBehaviour {
     {
         if (other.gameObject.tag == "Player")
         {
-            Debug.Log("Boomed");
+            Destroy(gameObject);
+        }
+        if (other.gameObject.tag == "Sonar")
+        {
+            GetComponent<Renderer>().enabled = true;
         }
     }
 }

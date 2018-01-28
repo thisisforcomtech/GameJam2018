@@ -8,9 +8,7 @@ public class SonarController : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        rend = GetComponent<Renderer>();
-        rend.material.shader = Shader.Find("Specular");
-        rend.material.SetColor("_SpecColor", Color.red);
+
     }
     public void run()
     {
@@ -39,13 +37,13 @@ public class SonarController : MonoBehaviour
             GetComponent<Rigidbody>().velocity = new Vector3(0,0,0);
             rend = GetComponent<Renderer>();
             rend.material.shader = Shader.Find("Specular");
-            rend.material.SetColor("_SpecColor", Color.red);
+            rend.material.SetColor("_Color", Color.white);
         }
-        else if (c.gameObject.tag == "Large Asteroid")
+        else if (c.gameObject.tag == "LivesPickup")
         {
         	rend = GetComponent<Renderer>();
             rend.material.shader = Shader.Find("Specular");
-            rend.material.SetColor("_SpecColor",Color.blue);
+            rend.material.SetColor("_Color",Color.red);
         }
     }
 }

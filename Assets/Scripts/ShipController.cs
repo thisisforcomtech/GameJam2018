@@ -17,6 +17,8 @@ public class ShipController : MonoBehaviour {
     public GameObject Radar;
     public GameObject gamecontroller;
 
+    private bool cutSceneMove = true;
+
     //ship stats
     int lives;
 
@@ -26,6 +28,7 @@ public class ShipController : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        CutScene();
         target = this.GetComponent<Transform>();
         lives = 1;
         warning = GameObject.Find("Warning");
@@ -42,32 +45,63 @@ public class ShipController : MonoBehaviour {
         }
 
     }
-	
-	// Update is called once per frame
-	void Update () {
+    void CutScene()
+    {
+        StartCoroutine(Example());
+    }
+    IEnumerator Example()
+    {
+
+        GameObject Scene = GameObject.FindWithTag("Scene");
+        yield return new WaitForSeconds(5);
+        Scene.GetComponent<Dialogue>().changeScene(2);
+
+        yield return new WaitForSeconds(5);
+        ShootSonar();
+        yield return new WaitForSeconds(5);
+        Scene.GetComponent<Dialogue>().changeScene(3);
+
+        yield return new WaitForSeconds(5);
+        Scene.GetComponent<Dialogue>().changeScene(4);
+
+        yield return new WaitForSeconds(5);
+        Scene.GetComponent<Dialogue>().changeScene(5);
+
+        yield return new WaitForSeconds(5);
+        Destroy(Scene);
+
+        cutSceneMove = false;
+
+        GameObject.FindWithTag("GameController").GetComponent<GameController>().BeginGame();
+    }
+    // Update is called once per frame
+    void Update () {
 		
 	}
     
     void FixedUpdate()
     {
-        if (Input.GetMouseButton(0) || Input.GetAxis("Vertical") != 0)
+        if (!cutSceneMove)
         {
-            // Thrust the ship if necessary
-            GetComponent<Rigidbody>().
-                AddForce(transform.up * thrustForce);
-        }
-        
-        // Has a bullet been fired
-        if (Input.GetKey("space"))
-        {
-            ShootSonar();
-        }
-        
+            if (Input.GetMouseButton(0) || Input.GetAxis("Vertical") != 0)
+            {
+                // Thrust the ship if necessary
+                GetComponent<Rigidbody>().
+                    AddForce(transform.up * thrustForce);
+            }
 
-        //calls rotation method
+            // Has a bullet been fired
+            if (Input.GetKey("space"))
+            {
+                ShootSonar();
+            }
+
+
+            //calls rotation method
+            SpawnHelpers();
+            checkDead();
+        }
         LookAtMouse();
-        SpawnHelpers();
-        checkDead();
     }
 
     void OnTriggerEnter(Collider other)
