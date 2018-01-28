@@ -3408,6 +3408,9 @@ MonoBehaviour:
   asteroid: {fileID: 1341400675390356, guid: 31358118d9ff290429e87b41dbb5a54d, type: 2}
   pickups: {fileID: 1185941758188210, guid: 93c266891b74fb340ba50529fc79299f, type: 2}
   enemies: {fileID: 1776348679173424, guid: 0bcdc00a56a93114683f5f46cc738897, type: 2}
+  MissingCounter: {fileID: 472016335}
+  RescueCounter: {fileID: 753312784}
+  LossCounter: {fileID: 713437680}
   camera: {fileID: 1076385140}
 --- !u!4 &1790952296
 Transform:

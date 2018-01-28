@@ -102,7 +102,7 @@ public class ShipController : MonoBehaviour
 
         cutSceneMove = false;
 
-        GameObject.FindWithTag("GameController").GetComponent<GameController>().BeginGame();
+        gamecontroller.GetComponent<GameController>().BeginGame();
     }
     // Update is called once per frame
     void Update()
@@ -151,10 +151,12 @@ public class ShipController : MonoBehaviour
         else if (other.gameObject.tag == "EnemyBullet")
         {
             lives--;
+            gamecontroller.GetComponent<GameController>().DecrementLives();
         }
         else if (other.gameObject.tag == "HomeFrame")
         {
-
+            gamecontroller.GetComponent<GameController>().IncrementScore(lives - 1);
+            lives = 1;
         }
 
 
@@ -165,23 +167,15 @@ public class ShipController : MonoBehaviour
         if (other.gameObject.tag == "Large Asteroid" || other.gameObject.tag == "Small Asteroid")
         {
             lives--;
+            gamecontroller.GetComponent<GameController>().DecrementLives();
             Destroy(other.gameObject);
         }
         if (other.gameObject.tag == "Enemy")
         {
             lives--;
+            gamecontroller.GetComponent<GameController>().DecrementLives();
         }
-        if (other.gameObject.tag == "Home")
-        {
-            if (lives < 5)
-            {
-                Destroy(other.gameObject);
-            }
-            else if (lives >= 5)
-            {
-                lives = 1;
-            }
-        }
+
     }
     void ShootSonar()
     {

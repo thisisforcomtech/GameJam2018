@@ -89,7 +89,7 @@ public class AsteroidController : MonoBehaviour
                 destroy, Camera.main.transform.position);*/
 
             // Add to the score
-            gameController.IncrementScore();
+            //gameController.IncrementScore();
 
             // Destroy the current asteroid
             Destroy(gameObject);

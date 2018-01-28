@@ -8,8 +8,13 @@ public class GameController : MonoBehaviour
     public GameObject asteroid;
     public GameObject pickups;
     public GameObject enemies;
+    public Text MissingCounter;
+    public Text RescueCounter;
+    public Text LossCounter;
+    private int score = 0;
+    private int total = 0;
+    private int lost = 0;
 
-    private int score;
     private int hiscore;
     private int asteroidsRemaining;
     private int lives;
@@ -33,6 +38,11 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        int missing = total - score - lost;
+        // Quit if player presses escape
+        MissingCounter.text = "Missing " + missing;
+        RescueCounter.text = "Rescued " + score;
+        LossCounter.text = "Lost " + lost;
 
         // Quit if player presses escape
         if (Input.GetKey("escape"))
@@ -53,6 +63,11 @@ public class GameController : MonoBehaviour
         waveText.text = "WAVE: " + wave;*/
 
         SpawnAsteroids();
+        GameObject[] x = GameObject.FindGameObjectsWithTag("LivesPickup");
+        foreach (GameObject y in x)
+        {
+            total++;
+        }
     }
 
     void SpawnAsteroids()
@@ -133,21 +148,21 @@ public class GameController : MonoBehaviour
         
     }
 
-    
-    public void IncrementScore()
+
+    public void IncrementScore(int score)
     {
-        score++;
+        this.score = this.score + score;
 
         //scoreText.text = "SCORE:" + score;
 
-       /*if (score > hiscore)
-        {
-            hiscore = score;
-            hiscoreText.text = "HISCORE: " + hiscore;
+        /*if (score > hiscore)
+         {
+             hiscore = score;
+             hiscoreText.text = "HISCORE: " + hiscore;
 
-            // Save the new hiscore
-            PlayerPrefs.SetInt("hiscore", hiscore);
-        }*/
+             // Save the new hiscore
+             PlayerPrefs.SetInt("hiscore", hiscore);
+         }*/
 
         // Has player destroyed all asteroids?
     }
@@ -158,11 +173,7 @@ public class GameController : MonoBehaviour
         //livesText.text = "LIVES: " + lives;
 
         // Has player run out of lives?
-        if (lives < 1)
-        {
-            // Restart the game
-            BeginGame();
-        }
+        lost++;
     }
 
     public void DecrementAsteroids()
