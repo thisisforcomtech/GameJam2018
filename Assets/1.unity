@@ -1431,31 +1431,6 @@ Prefab:
       propertyPath: gamecontroller
       value: 
       objectReference: {fileID: 1790952294}
-    - target: {fileID: 1644318340050694, guid: fc84b9e66a5f0e74297b753710ede400, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 54510036319000454, guid: fc84b9e66a5f0e74297b753710ede400,
-        type: 2}
-      propertyPath: m_Constraints
-      value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 4389654868652842, guid: fc84b9e66a5f0e74297b753710ede400, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 2.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4999108996762500, guid: fc84b9e66a5f0e74297b753710ede400, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 2.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4882867874081544, guid: fc84b9e66a5f0e74297b753710ede400, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 2.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4195924826492678, guid: fc84b9e66a5f0e74297b753710ede400, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 2.4
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fc84b9e66a5f0e74297b753710ede400, type: 2}
   m_IsPrefabParent: 0
