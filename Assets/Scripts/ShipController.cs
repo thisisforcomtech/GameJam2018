@@ -14,6 +14,7 @@ public class ShipController : MonoBehaviour {
     private Vector3 object_pos;
     private float angle;
     public GameObject sonar;
+    public GameObject Sonar2;
     public GameObject Radar;
     public GameObject gamecontroller;
 
@@ -37,12 +38,12 @@ public class ShipController : MonoBehaviour {
         lost.gameObject.SetActive(false);
         exit.gameObject.SetActive(false);
 
-        for (int i = 0; i < 150; i++)
-        {
+        //for (int i = 0; i < 150; i++)
+        //{
  
-            Instantiate(sonar, new Vector3 (0,0,0), new Quaternion(0,0,0,0));
+          //  Instantiate(sonar, new Vector3 (0,0,0), new Quaternion(0,0,0,0));
 
-        }
+        //}
 
     }
     void CutScene()
@@ -57,7 +58,7 @@ public class ShipController : MonoBehaviour {
         Scene.GetComponent<Dialogue>().changeScene(2);
 
         yield return new WaitForSeconds(5);
-        ShootSonar();
+        ShootSonar2();
         yield return new WaitForSeconds(5);
         Scene.GetComponent<Dialogue>().changeScene(3);
 
@@ -93,7 +94,7 @@ public class ShipController : MonoBehaviour {
             // Has a bullet been fired
             if (Input.GetKey("space"))
             {
-                ShootSonar();
+                ShootSonar2();
             }
 
 
@@ -121,7 +122,7 @@ public class ShipController : MonoBehaviour {
 
     void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.tag == "Rocks")
+        if (other.gameObject.tag == "Large Asteroid" || other.gameObject.tag == "Small Asteroid")
         {
             lives--;
             Destroy(other.gameObject);
@@ -168,6 +169,20 @@ public class ShipController : MonoBehaviour {
             }
             Instantiate(Radar, this.transform.position, this.transform.rotation);
         }
+        // Play a shoot sound
+    }
+    void ShootSonar2()
+    {
+        GameObject son =
+            GameObject.FindWithTag("Sonar");
+        if (son == null)
+            Instantiate(Sonar2, this.transform.position, this.transform.rotation).GetComponent<MeshRenderer>().material.color = new Color(1, 0.92f, 0.016f, 0.2f);
+        // Spawn a bullet
+        //Instantiate(bullet,
+        //   new Vector3(transform.position.x, transform.position.y, 0),
+        //   transform.rotation);
+        //Debug.Log(transform.rotation);
+
         // Play a shoot sound
     }
 
