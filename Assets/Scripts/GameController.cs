@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
@@ -17,8 +18,6 @@ public class GameController : MonoBehaviour
     private int increaseEachWave = 4;
     private bool SceneMove = true;
 
-    int mapSize = 30;
-
 
     public Transform camera;
 
@@ -26,7 +25,6 @@ public class GameController : MonoBehaviour
     void Start()
     {
         hiscore = PlayerPrefs.GetInt("hiscore", 0);
-
         
     }
 
@@ -68,8 +66,8 @@ public class GameController : MonoBehaviour
 
             // Spawn an asteroid
             Instantiate(asteroid,
-                new Vector3(Random.Range( -mapSize, mapSize),
-                    Random.Range( -mapSize, mapSize), 0),
+                new Vector3(Random.Range( -50.0f,  50.0f),
+                    Random.Range( -50.0f, 50.0f), 0),
                 Quaternion.Euler(0, 0, Random.Range(-0.0f, 359.0f)));
 
         }
@@ -78,8 +76,8 @@ public class GameController : MonoBehaviour
 
             // Spawn an asteroid
             Instantiate(pickups,
-                new Vector3(Random.Range(-mapSize, mapSize),
-                    Random.Range(-20.0f, mapSize), 0),
+                new Vector3(Random.Range(-50.0f, 50.0f),
+                    Random.Range(-30.0f, 50.0f), 0),
                 Quaternion.Euler(0, 0, Random.Range(-0.0f, 359.0f)));
 
         }
@@ -88,8 +86,8 @@ public class GameController : MonoBehaviour
 
             // Spawn an asteroid
             Instantiate(enemies,
-                new Vector3(Random.Range(-mapSize, mapSize),
-                    Random.Range(-10.0f, mapSize), 0),
+                new Vector3(Random.Range(-50.0f, 50.0f),
+                    Random.Range(-10.0f, 50.0f), 0),
                 Quaternion.Euler(0, 0, Random.Range(-0.0f, 359.0f)));
 
         }
@@ -197,6 +195,13 @@ public class GameController : MonoBehaviour
         {
             GameObject.Destroy(current);
         }
+    }
+
+    public void NextScene()
+    {
+
+            SceneManager.LoadScene("GameOver");
+
     }
 
 }
