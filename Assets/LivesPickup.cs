@@ -19,7 +19,10 @@ public class LivesPickup : MonoBehaviour {
     {
         if (other.gameObject.tag.Equals("Sonar") && !bliping)
         {
-            Instantiate(blip, this.transform.position, this.transform.rotation).GetComponent<MeshRenderer>().material.color = new Color(0f, 1f, 0f, 0.2f);
+            GameObject G = Instantiate(blip, this.transform.position, this.transform.rotation);
+            G.GetComponent<MeshRenderer>().material.color = new Color(0f, 1f, 0f, 0.2f);
+            G.transform.parent = this.transform;
+            bliping = true;
         }
     }
 }
