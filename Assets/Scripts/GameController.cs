@@ -9,6 +9,7 @@ public class GameController : MonoBehaviour
     public GameObject asteroid;
     public GameObject pickups;
     public GameObject enemies;
+    public GameObject enemies2;
     public Text MissingCounter;
     public Text RescueCounter;
     public Text LossCounter;
@@ -81,8 +82,8 @@ public class GameController : MonoBehaviour
 
             // Spawn an asteroid
             Instantiate(asteroid,
-                new Vector3(Random.Range( -50.0f,  50.0f),
-                    Random.Range( -50.0f, 50.0f), 0),
+                new Vector3(Random.Range( -30.0f,  30.0f),
+                    Random.Range( -30.0f, 30.0f), 0),
                 Quaternion.Euler(0, 0, Random.Range(-0.0f, 359.0f)));
 
         }
@@ -91,8 +92,8 @@ public class GameController : MonoBehaviour
 
             // Spawn an asteroid
             Instantiate(pickups,
-                new Vector3(Random.Range(-50.0f, 50.0f),
-                    Random.Range(-30.0f, 50.0f), 0),
+                new Vector3(Random.Range(-30.0f, 30.0f),
+                    Random.Range(-15.0f, 30.0f), 0),
                 Quaternion.Euler(0, 0, Random.Range(-0.0f, 359.0f)));
 
         }
@@ -101,8 +102,18 @@ public class GameController : MonoBehaviour
 
             // Spawn an asteroid
             Instantiate(enemies,
-                new Vector3(Random.Range(-50.0f, 50.0f),
-                    Random.Range(-10.0f, 50.0f), 0),
+                new Vector3(Random.Range(-30.0f, 30.0f),
+                    Random.Range(0f, 30.0f), 0),
+                Quaternion.Euler(0, 0, Random.Range(-0.0f, 359.0f)));
+
+        }
+        for (int i = 0; i < 8; i++)
+        {
+
+            // Spawn an asteroid
+            Instantiate(enemies2,
+                new Vector3(Random.Range(-30.0f, 30.0f),
+                    Random.Range(-20f, 20.0f), 0),
                 Quaternion.Euler(0, 0, Random.Range(-0.0f, 359.0f)));
 
         }
@@ -134,7 +145,7 @@ public class GameController : MonoBehaviour
 
         //}
 
-        
+
 
         //waveText.text = "WAVE: " + wave;
     }

@@ -14,6 +14,10 @@ public class EnemyBulletController : MonoBehaviour {
         GetComponent<Rigidbody>()
             .AddForce(transform.up * -100);
     }
+    void Update()
+    {
+        this.gameObject.transform.Rotate(Vector3.up, 200f * Time.deltaTime);
+    }
 
     void OnTriggerEnter(Collider other)
     {

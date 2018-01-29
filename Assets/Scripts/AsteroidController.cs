@@ -27,14 +27,25 @@ public class AsteroidController : MonoBehaviour
         grandChild1.GetComponent<Renderer>().enabled = false;
         grandChild2.GetComponent<Renderer>().enabled = false;
 
+        if (tag.Equals("Small Asteroid"))
+        {
+            GetComponent<Rigidbody>()
+                    .AddForce(transform.up * Random.Range(-50.0f, 150.0f)); 
+             grandChild1.GetComponent<Renderer>().enabled = true;
+            grandChild2.GetComponent<Renderer>().enabled = true;
+        }
+
         // Push the asteroid in the direction it is facing
-        /*        GetComponent<Rigidbody>()
-                    .AddForce(transform.up * Random.Range(-50.0f, 150.0f));*/
+        /*       
 
         // Give a random angular velocity/rotation
         /*        GetComponent<Rigidbody>()
                     .angularVelocity = Random.Range(-0.0f, 90.0f);*/
 
+    }
+    void Update()
+    {
+        this.gameObject.transform.Rotate(Vector3.up, 100f * Time.deltaTime);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -48,41 +59,12 @@ public class AsteroidController : MonoBehaviour
     void OnCollisionEnter(Collision c)
     {
       
-        if (c.gameObject.tag.Equals("Bullet"))
+        if (c.gameObject.tag.Equals("EnemyBullet") )
         {
 
             // Destroy the bullet
-            Destroy(c.gameObject);
 
             // If large asteroid spawn new ones
-            if (tag.Equals("Large Asteroid"))
-            {
-                // Spawn small asteroids
-                Instantiate(smallAsteroid,
-                    new Vector3(transform.position.x - .5f,
-                        transform.position.y - .5f, 0),
-                        Quaternion.Euler(0, 0, 90));
-
-                // Spawn small asteroids
-                Instantiate(smallAsteroid,
-                    new Vector3(transform.position.x + .5f,
-                        transform.position.y + .0f, 0),
-                        Quaternion.Euler(0, 0, 0));
-
-                // Spawn small asteroids
-                Instantiate(smallAsteroid,
-                    new Vector3(transform.position.x + .5f,
-                        transform.position.y - .5f, 0),
-                        Quaternion.Euler(0, 0, 270));
-
-                gameController.SplitAsteroid(); // +2
-
-            }
-            else
-            {
-                // Just a small asteroid destroyed
-                gameController.DecrementAsteroids();
-            }
 
             // Play a sound
             /*AudioSource.PlayClipAtPoint(
@@ -92,9 +74,50 @@ public class AsteroidController : MonoBehaviour
             //gameController.IncrementScore();
 
             // Destroy the current asteroid
+            SpawnAsteroids();
+            Destroy(c.gameObject);
             Destroy(gameObject);
 
         }
+        else if (c.gameObject.tag.Equals("Enemy") || c.gameObject.tag.Equals("EnemyShip2"))
+        {
 
+            
+            SpawnAsteroids();
+
+            Destroy(gameObject);
+
+        }
+        else if(tag.Equals("Small Asteroid") && c.gameObject.tag.Equals("EnemyBullet"))
+        {
+            Destroy(gameObject);
+        }
+
+    }
+    public void SpawnAsteroids ()
+    {
+        if (tag.Equals("Large Asteroid"))
+        {
+            // Spawn small asteroids
+            Instantiate(smallAsteroid,
+                new Vector3(transform.position.x - .5f,
+                    transform.position.y - .5f, 0),
+                    Quaternion.Euler(0, 0, 90));
+
+            // Spawn small asteroids
+            Instantiate(smallAsteroid,
+                new Vector3(transform.position.x + .5f,
+                    transform.position.y + .0f, 0),
+                    Quaternion.Euler(0, 0, 0));
+
+            // Spawn small asteroids
+            Instantiate(smallAsteroid,
+                new Vector3(transform.position.x + .5f,
+                    transform.position.y - .5f, 0),
+                    Quaternion.Euler(0, 0, 270));
+
+            //gameController.SplitAsteroid(); // +2
+
+        }
     }
 }

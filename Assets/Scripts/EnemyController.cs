@@ -16,6 +16,9 @@ public class EnemyController : MonoBehaviour {
     float aggro;
     float wanderTime = 300;
     float turnTime = 120;
+    public float speed = 0.75f;
+    public float interval;
+    Vector3 position;
 
     public GameObject enemyBullet;
 
@@ -26,6 +29,8 @@ public class EnemyController : MonoBehaviour {
         minAimDis = 5;
         minAtkDis = 3;
         aggro = 0;
+        InvokeRepeating("flip", interval,interval);
+        position = transform.forward*-100;
     }
 
     // Update is called once per frame
@@ -60,25 +65,25 @@ public class EnemyController : MonoBehaviour {
         else
         {
             IsAttacking = false;
-            if (wanderTime <= 0)
-            {
-                if (turnTime > 0) 
-		{
-                    spinBehind();
-                    turnTime--;
-		}
-                else if (turnTime <= 0)
-                {
-                    wanderTime = 300;
-                    turnTime = 120;
-                }
-            }
-            else if (wanderTime > 0)
-            {
-                GetComponent<Rigidbody>().AddForce(transform.up * -0.75f);
-                wanderTime--;
-            }
+            GetComponent<Rigidbody>()
+             .AddForce(transform.up * -speed);
+
+            //Vector3 turnRot = position - this.transform.position;
+            //Quaternion finalRot = Quaternion.LookRotation(turnRot);
+            //float x = this.transform.position.x -position.x;
+            //float y = this.transform.position.y - position.y;
+            //float angle = Mathf.Atan2(y, x) * Mathf.Rad2Deg;
+            //Quaternion finalRot = Quaternion.Euler(0, 0, (angle - 90));
+            //transform.rotation = Quaternion.RotateTowards(transform.rotation, finalRot, Time.deltaTime * 100f);
+            
+
         }
+    }
+    void flip()
+    {
+
+        speed = speed*-1;
+        
     }
 
     void OnTriggerEnter(Collider other)
@@ -102,12 +107,19 @@ public class EnemyController : MonoBehaviour {
             Quaternion finalRot = Quaternion.Euler(0, 0, (angle - 90));
             transform.rotation = Quaternion.RotateTowards(transform.rotation, finalRot, Time.deltaTime * 30f);
 
-            GetComponent<Rigidbody>().AddForce(transform.up * -0.75f);
+            if (tag.Equals("EnemyShip2"))
+            {
+                GetComponent<Rigidbody>().AddForce(transform.up * -1f);
+            }
+            else
+            {
+                GetComponent<Rigidbody>().AddForce(transform.up * -0.75f);
+            }
 
             //Shoot
             if (DistanceFrom < minAtkDis)
             {
-                if (Time.time > nextFire)
+                if (Time.time > nextFire && !tag.Equals("EnemyShip2"))
                 {
                     nextFire = Time.time + fireRate;
                     Instantiate(enemyBullet,

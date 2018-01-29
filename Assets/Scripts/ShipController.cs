@@ -167,10 +167,11 @@ public class ShipController : MonoBehaviour
         if (other.gameObject.tag == "Large Asteroid" || other.gameObject.tag == "Small Asteroid")
         {
             lives--;
-            gamecontroller.GetComponent<GameController>().DecrementLives();
+            other.gameObject.GetComponent<AsteroidController>().SpawnAsteroids();
             Destroy(other.gameObject);
+            gamecontroller.GetComponent<GameController>().DecrementLives();
         }
-        if (other.gameObject.tag == "Enemy")
+        else if (other.gameObject.tag == "EnemyBullet" || other.gameObject.tag == "Enemy" || other.gameObject.tag == "EnemyShip2")
         {
             lives--;
             gamecontroller.GetComponent<GameController>().DecrementLives();

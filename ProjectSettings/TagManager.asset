@@ -17,6 +17,7 @@ TagManager:
   - Scene
   - Blip
   - HomeFrame
+  - EnemyShip2
   layers:
   - Default
   - TransparentFX
@@ -30,8 +31,8 @@ TagManager:
   - Sonar
   - Compass
   - Minimap
-  - 
-  - 
+  - Enemy
+  - EnemyBullet
   - 
   - 
   - 

@@ -14,8 +14,9 @@ public class LivesController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-			//this.transform.position = ChildGameObject1.transform.position;
-	}
+        this.gameObject.transform.Rotate(Vector3.up, 100f * Time.deltaTime);
+        //this.transform.position = ChildGameObject1.transform.position;
+    }
 
     void OnTriggerEnter(Collider other)
     {
