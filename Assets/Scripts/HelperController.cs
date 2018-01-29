@@ -18,7 +18,8 @@ public class HelperController : MonoBehaviour {
 	void Update () {
 		syncRotation();
 		syncPosition();
-	}
+        this.gameObject.transform.GetChild(0).gameObject.transform.Rotate(Vector3.up, 100f * Time.deltaTime);
+    }
 
     void syncRotation()
     {

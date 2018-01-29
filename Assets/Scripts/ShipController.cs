@@ -175,6 +175,10 @@ public class ShipController : MonoBehaviour
         {
             lives--;
             gamecontroller.GetComponent<GameController>().DecrementLives();
+            if(other.gameObject.tag == "EnemyShip2")
+            {
+                Destroy(other.gameObject);
+            }
         }
 
     }
