@@ -7,6 +7,7 @@ public class BlipScript : MonoBehaviour
     public float maxSize;
     public float growFactor;
     public float waitTime;
+    public bool willDie = false;
 
     void Start()
     {
@@ -38,9 +39,15 @@ public class BlipScript : MonoBehaviour
                 transform.localScale -= new Vector3(1, 1, 1) * Time.deltaTime * growFactor;
                 yield return null;
             }
-
-            timer = 0;
-            yield return new WaitForSeconds(waitTime);
+            if (!willDie)
+            {
+                timer = 0;
+                yield return new WaitForSeconds(waitTime);
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
         }
     }
 }

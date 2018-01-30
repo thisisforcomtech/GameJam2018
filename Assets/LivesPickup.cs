@@ -6,8 +6,14 @@ public class LivesPickup : MonoBehaviour {
 
     public GameObject blip;
     public bool bliping = false;
-	// Use this for initialization
-	void Start () {
+    public bool die = false;
+    public float maxSize;
+    public float growFactor;
+    public float waitTime;
+    public Color color;
+    public bool retry;
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -19,10 +25,20 @@ public class LivesPickup : MonoBehaviour {
     {
         if (other.gameObject.tag.Equals("Sonar") && !bliping)
         {
-            GameObject G = Instantiate(blip, this.transform.position, this.transform.rotation);
-            G.GetComponent<MeshRenderer>().material.color = new Color(0f, 1f, 0f, 0.2f);
-            G.transform.parent = this.transform.parent;
+            spawnBlip(die, maxSize, growFactor, waitTime, color);
             bliping = true;
         }
+        if (retry)
+            bliping = false;
+    }
+    public void spawnBlip(bool die, float maxSize, float growFactor, float waitTime, Color color)
+    {
+        GameObject G = Instantiate(blip, this.transform.position, this.transform.rotation);
+        G.GetComponent<MeshRenderer>().material.color = color;
+        G.transform.parent = this.transform.parent;
+        G.GetComponent<BlipScript>().willDie = die;
+        G.GetComponent<BlipScript>().maxSize = maxSize;
+        G.GetComponent<BlipScript>().growFactor = growFactor;
+        G.GetComponent<BlipScript>().waitTime = waitTime;
     }
 }

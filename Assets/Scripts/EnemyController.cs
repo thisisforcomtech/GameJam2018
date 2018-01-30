@@ -129,7 +129,16 @@ public class EnemyController : MonoBehaviour {
             }
         }
     }
-	void spinBehind()
+    void OnCollisionEnter(Collision c)
+    {
+
+        if (c.gameObject.tag == "EnemyShip2" || c.gameObject.tag == "Enemy")
+        {
+                
+                Destroy(this.gameObject);
+        }
+    }
+            void spinBehind()
 	{
 	}
 }

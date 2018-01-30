@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4664315050875594}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: polySurface8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34,7 +34,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4703125714853008}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: transform4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49,7 +49,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4229940910622608}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: transform21
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64,7 +64,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4897892201073490}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: transform1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -79,7 +79,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4213252182873420}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: polySurface6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4633523175214002}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: polySurface10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,7 +109,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4322131614231654}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: polySurface12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124,7 +124,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4613157236513836}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: pCylinder1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -139,7 +139,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4395583976706836}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: polySurface2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -154,7 +154,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4126743681907068}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: transform9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -169,7 +169,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4047221335064034}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: polySurface5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -184,7 +184,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4895945362383542}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: transform19
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -199,7 +199,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4036455459945240}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: transform17
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -214,7 +214,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4764520097198664}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: transform16
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -229,7 +229,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4596158975158168}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: transform5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -244,7 +244,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4956757750548106}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: polySurface2 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -259,7 +259,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4621206775858090}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: transform8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -274,7 +274,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4322274476148970}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: transform7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -289,7 +289,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4391003593141256}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: main_ship
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -304,7 +304,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4639396827711146}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: transform10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -319,7 +319,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4465657605299312}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: polySurface7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -334,7 +334,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4326153974791400}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: transform20
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -349,7 +349,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4588594404594008}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: transform15
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -364,7 +364,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4000530138920998}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: transform12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -379,7 +379,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4015853423297480}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: transform3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -394,7 +394,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4821912933275034}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: polySurface3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -409,7 +409,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4104827751390860}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: pPlane1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -424,7 +424,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4286196145316880}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: polySurface11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -442,7 +442,7 @@ GameObject:
   - component: {fileID: 136091693654619006}
   - component: {fileID: 54715362434346738}
   - component: {fileID: 114450245616412926}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Enemy 2
   m_TagString: EnemyShip2
   m_Icon: {fileID: 0}
@@ -457,7 +457,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4143106139849872}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: polySurface4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -472,7 +472,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4277159766831442}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: polySurface8 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -487,7 +487,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4699680457163054}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: transform18
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -502,7 +502,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4747138214112138}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: polySurface14
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -517,7 +517,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4640062675401834}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: polySurface9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -532,7 +532,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4214504804731268}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: transform11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -547,7 +547,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4392431354320812}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: polySurface1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -562,7 +562,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4550477406450448}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: transform13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -577,7 +577,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4740672418090288}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: polySurface10 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -593,7 +593,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4082077902995594}
   - component: {fileID: 95279819068291412}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: enemy_ship2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -608,7 +608,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4466874200519032}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: transform2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -623,7 +623,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4888601194715978}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: polySurface13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -638,8 +638,25 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4124547126619202}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: polySurface3 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1883429537365276
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4125956346588180}
+  - component: {fileID: 135654766788304132}
+  - component: {fileID: 114503337099003090}
+  m_Layer: 12
+  m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -655,7 +672,7 @@ GameObject:
   - component: {fileID: 4020325170472486}
   - component: {fileID: 33337676866144226}
   - component: {fileID: 23970535795546010}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: enemy_ship2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -670,7 +687,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4151142576834404}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: transform6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -685,7 +702,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4786176958893818}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: transform14
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -712,10 +729,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1587361575332498}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.35, y: -18.52, z: 0}
-  m_LocalScale: {x: 20, y: 20, z: 20}
+  m_LocalPosition: {x: 0, y: -28, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4082077902995594}
+  - {fileID: 4125956346588180}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -781,8 +799,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1762347607266990}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: -0.7071068}
-  m_LocalPosition: {x: 0.0449, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 20, y: 20, z: 20}
   m_Children:
   - {fileID: 4020325170472486}
   - {fileID: 4391003593141256}
@@ -825,6 +843,19 @@ Transform:
   - {fileID: 4015853423297480}
   m_Father: {fileID: 4391003593141256}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4125956346588180
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1883429537365276}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.85, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4005585461734332}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4126743681907068
 Transform:
@@ -1411,6 +1442,37 @@ MonoBehaviour:
   interval: 3
   enemyBullet: {fileID: 1575545189660928, guid: 9909862cd5dda2d47be6b7ead5583385,
     type: 2}
+--- !u!114 &114503337099003090
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1883429537365276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ba2fa08ab707164b9d047a618c3d45a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blip: {fileID: 1652718759634550, guid: fc5b46b8ab1fafa4e8d623f618146045, type: 2}
+  bliping: 0
+  die: 1
+  maxSize: 7
+  growFactor: 5
+  waitTime: 0
+  color: {r: 0.64705884, g: 0, b: 0, a: 0}
+  retry: 1
+--- !u!135 &135654766788304132
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1883429537365276}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 8
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!136 &136091693654619006
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -1420,7 +1482,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.04
+  m_Radius: 0.8
   m_Height: 0.03
   m_Direction: 2
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: -0.85, y: 0, z: 0}
