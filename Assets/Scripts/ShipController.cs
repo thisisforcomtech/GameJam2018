@@ -31,7 +31,7 @@ public class ShipController : MonoBehaviour
     private bool cutSceneMove = true;
 
     //ship stats
-    int lives;
+    public int lives;
 
 
 
@@ -42,6 +42,7 @@ public class ShipController : MonoBehaviour
 
 
     // Use this for initialization
+
     void Start()
     {
 
@@ -144,8 +145,11 @@ public class ShipController : MonoBehaviour
     {
         if (other.gameObject.tag == "LivesPickup")
         {
-            lives++;
-            Destroy(other.gameObject);
+            if (lives < 5)
+            {
+                lives++;
+                Destroy(other.gameObject);
+            }
             //gamecontroller.GetComponent<GameController>().spawnEnemies(5,2);
         }
         else if (other.gameObject.tag == "EnemyBullet")
@@ -175,7 +179,7 @@ public class ShipController : MonoBehaviour
         {
             lives--;
             gamecontroller.GetComponent<GameController>().DecrementLives();
-            if(other.gameObject.tag == "EnemyShip2")
+            if (other.gameObject.tag == "EnemyShip2" || other.gameObject.tag == "EnemyBullet")
             {
                 Destroy(other.gameObject);
             }

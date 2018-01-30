@@ -13,9 +13,9 @@ public class GameController : MonoBehaviour
     public Text MissingCounter;
     public Text RescueCounter;
     public Text LossCounter;
-    private int score = 0;
-    private int total = 0;
-    private int lost = 0;
+    public int score = 0;
+    public int total = 0;
+    public int lost = 0;
 
     private int hiscore;
     private int asteroidsRemaining;
@@ -23,25 +23,39 @@ public class GameController : MonoBehaviour
     private int wave;
     private int increaseEachWave = 4;
     private bool SceneMove = true;
+    private GameObject player;
 
+    public int missing = 99;
+    int carrying = 99;
 
     public Transform camera;
 
     // Use this for initialization
+    void Awake()
+    {
+        DontDestroyOnLoad(transform.gameObject);
+    }
     void Start()
     {
         hiscore = PlayerPrefs.GetInt("hiscore", 0);
-        
+        player = GameObject.FindWithTag("Player");
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        int missing = total - score - lost;
+        missing = total - score - lost;
+        carrying = player.GetComponent<ShipController>().lives - 1;
         // Quit if player presses escape
-        MissingCounter.text = "Missing " + missing;
-        RescueCounter.text = "Rescued " + score;
-        LossCounter.text = "Lost " + lost;
+        MissingCounter.text = "Missing : " + missing;
+        RescueCounter.text = "Rescued : " + score;
+        LossCounter.text = "Carrying : " + carrying + "/4";
+
+        if (missing == 0 && carrying == 0)
+        {
+            SceneManager.LoadScene("Victory");
+        }
 
         // Quit if player presses escape
         if (Input.GetKey("escape"))
@@ -161,10 +175,7 @@ public class GameController : MonoBehaviour
     public void IncrementScore(int score)
     {
         this.score = this.score + score;
-        if (this.score > 8)
-        {
-            SceneManager.LoadScene("Victory");
-        }
+        
         //scoreText.text = "SCORE:" + score;
 
         /*if (score > hiscore)
