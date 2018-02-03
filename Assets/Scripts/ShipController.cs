@@ -33,6 +33,11 @@ public class ShipController : MonoBehaviour
     //ship stats
     public int lives;
 
+    //for touch controls
+    Vector3 touch_pos;
+    int tapCount = 0;
+    float maxDubbleTapTime = 0.3f;
+    float newTime;
 
 
     GameObject warning;
@@ -119,7 +124,7 @@ public class ShipController : MonoBehaviour
             horizontal = Input.GetAxis("Horizontal");
             vertical = Input.GetAxis("Vertical");
 
-            if (Input.GetMouseButton(0) || Input.GetAxis("Vertical") != 0)
+            if (Input.GetMouseButton(0) || Input.GetAxis("Vertical") != 0 || Input.touchCount > 0)
             {
                 // Thrust the ship if necessary
                 GetComponent<Rigidbody>().
@@ -132,9 +137,36 @@ public class ShipController : MonoBehaviour
                 ShootSonar2();
             }
 
+            //send sonar for touch
+            if (Application.platform == RuntimePlatform.Android)
+            {
+                if (Input.touchCount > 0)
+                {
+                    Touch touch = Input.GetTouch(0);
+                    if (touch.phase == TouchPhase.Ended)
+                    {
+                        tapCount += 1;
+                    }
+                    if (tapCount == 1)
+                    {
+                        newTime = Time.time + maxDubbleTapTime;
+                    }
+                    else if (tapCount == 2 && Time.time <= newTime)
+                    {
+                        //Whatever you want after a dubble tap    
+                        ShootSonar2();
+                        tapCount = 0;
+                    }
+                }
+                if (Time.time > newTime)
+                {
+                    tapCount = 0;
+                }
+            }
 
-            //calls rotation method
-            SpawnHelpers();
+
+        //calls rotation method
+        SpawnHelpers();
             checkDead();
         }
         LookAtMouse();
@@ -294,6 +326,22 @@ public class ShipController : MonoBehaviour
         angle = Mathf.Atan2(mouse_pos.y, mouse_pos.x) * Mathf.Rad2Deg;
         Quaternion finalRot = Quaternion.Euler(0, 0, (angle - 90));
         transform.rotation = Quaternion.RotateTowards(transform.rotation, finalRot, Time.deltaTime * rotationSpeed);
+
+        if (Application.platform == RuntimePlatform.Android)
+        {
+            if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
+            {
+                Vector2 touch_pos2 = Input.GetTouch(0).position;
+                touch_pos = touch_pos2;
+                touch_pos.z = 5.23f;
+                object_pos = Camera.main.WorldToScreenPoint(target.position);
+                touch_pos.x = touch_pos.x - object_pos.x;
+                touch_pos.y = touch_pos.y - object_pos.y;
+                angle = Mathf.Atan2(touch_pos.y, touch_pos.x) * Mathf.Rad2Deg;
+                Quaternion finalRotT = Quaternion.Euler(0, 0, (angle - 90));
+                transform.rotation = Quaternion.RotateTowards(transform.rotation, finalRotT, Time.deltaTime * rotationSpeed);
+            }
+        }
     }
     Vector3 RandomCircle(Vector3 center, float radius)
     {
