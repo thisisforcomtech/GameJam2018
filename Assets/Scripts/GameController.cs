@@ -25,8 +25,8 @@ public class GameController : MonoBehaviour
     private bool SceneMove = true;
     private GameObject player;
 
-    public int missing = 99;
-    int carrying = 99;
+    public int missing = 12;
+    int carrying = 0;
 
     public Transform camera;
 
@@ -49,12 +49,25 @@ public class GameController : MonoBehaviour
         carrying = player.GetComponent<ShipController>().lives - 1;
         // Quit if player presses escape
         MissingCounter.text = "Missing : " + missing;
-        RescueCounter.text = "Rescued : " + score;
-        LossCounter.text = "Carrying : " + carrying + "/4";
+        RescueCounter.text = "Rescued : " + score + "/8";
 
-        if (missing == 0 && carrying == 0)
+        if (carrying <= 0)
+        {
+            LossCounter.text = "Carrying : " + "0" + "/4";
+        }
+        else
+        {
+            LossCounter.text = "Carrying : " + carrying + "/4";
+        }
+
+        if (score >= 8)
         {
             SceneManager.LoadScene("Victory");
+        }
+
+        if (missing + carrying + score < 8  && carrying + 1 > 0)
+        {
+            SceneManager.LoadScene("GameOver");
         }
 
         // Quit if player presses escape
@@ -101,10 +114,10 @@ public class GameController : MonoBehaviour
                 Quaternion.Euler(0, 0, Random.Range(-0.0f, 359.0f)));
 
         }
-        for (int i = 0; i < 9; i++)
+        for (int i = 0; i < 11; i++)
         {
 
-            // Spawn an asteroid
+            // Spawn an pickup
             Instantiate(pickups,
                 new Vector3(Random.Range(-30.0f, 30.0f),
                     Random.Range(-15.0f, 30.0f), 0),
@@ -114,7 +127,7 @@ public class GameController : MonoBehaviour
         for (int i = 0; i < 5; i++)
         {
 
-            // Spawn an asteroid
+            // Spawn an shooter
             Instantiate(enemies,
                 new Vector3(Random.Range(-30.0f, 30.0f),
                     Random.Range(0f, 30.0f), 0),
@@ -124,7 +137,7 @@ public class GameController : MonoBehaviour
         for (int i = 0; i < 8; i++)
         {
 
-            // Spawn an asteroid
+            // Spawn an rammers
             Instantiate(enemies2,
                 new Vector3(Random.Range(-30.0f, 30.0f),
                     Random.Range(-20f, 20.0f), 0),

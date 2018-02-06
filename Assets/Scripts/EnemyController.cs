@@ -16,7 +16,7 @@ public class EnemyController : MonoBehaviour {
     float aggro;
     float wanderTime = 300;
     float turnTime = 120;
-    public float speed = 0.75f;
+    public float speed;
     public float interval;
     Vector3 position;
 
@@ -26,6 +26,8 @@ public class EnemyController : MonoBehaviour {
     void Start () {
 		P = GameObject.FindWithTag("Player");
         Player = P.GetComponent<ShipController>();
+        IsAttacking = false;
+        aggro = 0;
         minAimDis = 5;
         minAtkDis = 3;
         aggro = 0;
@@ -47,8 +49,16 @@ public class EnemyController : MonoBehaviour {
 
         if (aggro > 0)
         {
-            minAimDis = 20;
-            minAtkDis = 12;
+            minAimDis = 10;
+            minAtkDis = 6;
+            if (tag.Equals("EnemyShip1"))
+            {
+                speed = 0.75f;
+            }
+            if (tag.Equals("EnemyShip2"))
+            {
+                speed = 1f;
+            }
             aggro--;
         }
         else if (aggro <= 0)
@@ -131,11 +141,13 @@ public class EnemyController : MonoBehaviour {
     }
     void OnCollisionEnter(Collision c)
     {
-
-        if (c.gameObject.tag == "EnemyShip2" || c.gameObject.tag == "Enemy")
+        if (tag.Equals("EnemyShip2"))
         {
-                
+            if (c.gameObject.tag == "EnemyShip2" || c.gameObject.tag == "Enemy")
+            {
+
                 Destroy(this.gameObject);
+            }
         }
     }
             void spinBehind()

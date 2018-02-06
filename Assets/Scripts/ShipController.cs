@@ -43,6 +43,7 @@ public class ShipController : MonoBehaviour
     GameObject warning;
     GameObject lost;
     GameObject exit;
+    GameObject retry;
 
 
 
@@ -65,8 +66,10 @@ public class ShipController : MonoBehaviour
         warning = GameObject.Find("Warning");
         lost = GameObject.Find("Lost");
         exit = GameObject.Find("Exit");
+        retry = GameObject.Find("Retry");
         lost.gameObject.SetActive(false);
         exit.gameObject.SetActive(false);
+        retry.gameObject.SetActive(false);
 
         //for (int i = 0; i < 150; i++)
         //{
@@ -268,6 +271,7 @@ public class ShipController : MonoBehaviour
             warning.gameObject.SetActive(false);
             lost.gameObject.SetActive(true);
             exit.gameObject.SetActive(true);
+            retry.gameObject.SetActive(true);
             gameObject.SetActive(false);
         }
     }
