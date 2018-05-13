@@ -21,6 +21,7 @@ public class EnemyController : MonoBehaviour {
     Vector3 position;
 
     public GameObject enemyBullet;
+    public GameObject boomBleedR;
 
     // Use this for initialization
     void Start () {
@@ -145,7 +146,9 @@ public class EnemyController : MonoBehaviour {
         {
             if (c.gameObject.tag == "EnemyShip2" || c.gameObject.tag == "Enemy")
             {
-
+		Instantiate(boomBleedR,
+                        new Vector3(transform.position.x, transform.position.y, 0),
+                        transform.rotation);
                 Destroy(this.gameObject);
             }
         }

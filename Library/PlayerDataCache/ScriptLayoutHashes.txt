@@ -1,6 +1,7 @@
 Android
 SceneListBegin?
 Assets/Title.unity
+Assets/2.unity
 Assets/1.unity
 Assets/Victory.unity
 Assets/GameOver.unity
@@ -17,6 +18,8 @@ ff05dcdf90651c3d98a9cad3df5e471e UnityEngine.Timeline.dll:UnityEngine.Timeline.C
 6af7378a45ad6da4992a71ef50ddc2eb UnityEngine.Timeline.dll:UnityEngine.Timeline.GroupTrack
 6af7378a45ad6da4992a71ef50ddc2eb UnityEngine.Timeline.dll:UnityEngine.Timeline.PlayableTrack
 9ca6347af5ceb6b0d1c105af31b6722e UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.tutorialScript
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.RetryScript
 a35dc9cca2faebc5f5f1aeb9e8e47bbe UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.UI.dll:UnityEngine.EventSystems.BaseInput
 49cd62a578efc0a599b810a2b66cd49c UnityEngine.UI.dll:UnityEngine.UI.Button
@@ -83,7 +86,7 @@ f61c0793411f10cf5fbfa1473fef5ef2 UnityEngine.UI.dll:UnityEngine.UI.ToggleGroup
 1b8c02d0aa82fbf036a2b9b2d713eec3 UnityEngine.UI.dll:UnityEngine.UI.VerticalLayoutGroup
 c215d9e0299a8bb6432327c3621f419f Assembly-CSharp.dll:.LivesController
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.RadarController
-d5836ff017f87026e721fc5a14213f9d Assembly-CSharp.dll:.EnemyController
+197b1096848cb63dad784613b6f2ba5d Assembly-CSharp.dll:.EnemyController
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
 970a95104359198fe1a98ef48655de8c UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
 8144169769d51429c4aedc8b0f92d47b UnityEngine.Timeline.dll:UnityEngine.Timeline.AnimationPlayableAsset
@@ -157,10 +160,11 @@ bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.Audi
 c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingCollider
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
 0ea7e3a1b65cd933d7a007e6774c4eaa Assembly-CSharp.dll:.ArrowScript
-156d7173300ae5876e8725aff0d6311a Assembly-CSharp.dll:.ShipController
+ea1126ae93a39652a6fea5d952ffac53 Assembly-CSharp.dll:.ShipController
 600bf2432747463c84424edccb3c1d05 Assembly-CSharp.dll:.Camera2DFollow
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 8ca0731222d7a835c6d8acbaed0251a5 Assembly-CSharp.dll:.GameController
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.BackToMenu
+2e9e188ed9f032865b75c92cdc8fc868 Assembly-CSharp.dll:.controlScript
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.StartButtonController
 3e1be8f087d59000cade950405ed944d Assembly-CSharp.dll:.HelperController

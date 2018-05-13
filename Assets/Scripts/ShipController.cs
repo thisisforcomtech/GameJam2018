@@ -27,6 +27,7 @@ public class ShipController : MonoBehaviour
     public GameObject Sonar2;
     public GameObject Radar;
     public GameObject gamecontroller;
+    public GameObject boomBleedG;
 
     private bool cutSceneMove = true;
 
@@ -190,6 +191,7 @@ public class ShipController : MonoBehaviour
         else if (other.gameObject.tag == "EnemyBullet")
         {
             lives--;
+	    makeBoomBleed();
             gamecontroller.GetComponent<GameController>().DecrementLives();
         }
         else if (other.gameObject.tag == "HomeFrame")
@@ -206,6 +208,7 @@ public class ShipController : MonoBehaviour
         if (other.gameObject.tag == "Large Asteroid" || other.gameObject.tag == "Small Asteroid")
         {
             lives--;
+            makeBoomBleed();
             other.gameObject.GetComponent<AsteroidController>().SpawnAsteroids();
             Destroy(other.gameObject);
             gamecontroller.GetComponent<GameController>().DecrementLives();
@@ -213,6 +216,7 @@ public class ShipController : MonoBehaviour
         else if (other.gameObject.tag == "EnemyBullet" || other.gameObject.tag == "Enemy" || other.gameObject.tag == "EnemyShip2")
         {
             lives--;
+	    makeBoomBleed();
             gamecontroller.GetComponent<GameController>().DecrementLives();
             if (other.gameObject.tag == "EnemyShip2" || other.gameObject.tag == "EnemyBullet")
             {
@@ -382,6 +386,13 @@ public class ShipController : MonoBehaviour
         {
             warning.gameObject.SetActive(false);
             lives--;
+	    makeBoomBleed();
         }
+    }
+
+    void makeBoomBleed(){
+	Instantiate(boomBleedG,
+                        new Vector3(transform.position.x, transform.position.y, 0),
+                        transform.rotation);
     }
 }

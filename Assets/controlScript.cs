@@ -11,14 +11,14 @@ public class controlScript : MonoBehaviour {
 	void Awake () {
         if (Application.platform != RuntimePlatform.Android)
         {
-            control.text = "Controls: \n use the Mouse \n and the W key \n to guild the ship ";
-            tapText.text = "press space to send out a sonar \n to see near by asteroids \n and enemy ships";
+            control.text = "use the Mouse \n and the W key \n to guild your ship ";
+            tapText.text = "Press Space to send out a sonar \n to see nearby asteroids \n and ships";
 
         }
         else if (Application.platform == RuntimePlatform.Android)
         {
-            control.text = "Controls: \n Hold down the direction you wish to go \n to guild your ship";
-            tapText.text = "Tap the screen send out a sonar \n to see near by asteroids \n and enemy ships";
+            control.text = "Hold down the direction \n you wish to go \n to guild your ship";
+            tapText.text = "Double tap to send out a sonar \n to see nearby asteroids \n and ships";
         }
     }
 }
